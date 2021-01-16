@@ -1,0 +1,138 @@
+
+<html>
+<head>
+<title>STRINGS AND DIGITS</title>
+<script>
+function len()
+{
+var a=document.getElementById("box1").value;
+var len=a.length;
+alert(len);
+}
+
+function up()
+{
+var a=document.getElementById("box1").value;
+var upp=a.toUpperCase();
+alert(upp);
+}
+
+function low()
+{
+var a=document.getElementById("box1").value;
+var loww=a.toLowerCase();
+alert(loww);
+}
+
+function slice()
+{
+var a=document.getElementById("box1").value;
+var b=document.getElementById("box2").value;
+var c=document.getElementById("box3").value;
+var pos=a.slice(b,c);
+alert(pos);
+}
+
+function repl()
+{
+var a=document.getElementById("box1").value;
+var b=document.getElementById("box4").value;
+var c=document.getElementById("box5").value;
+var rep=a.replace(b,c);
+alert(rep);
+}
+
+function conca()
+{
+var a=document.getElementById("box1").value;
+var b=document.getElementById("box6").value;
+var conpos=a.concat(" ",b);
+alert(conpos);
+}
+
+function pow()
+{
+var a=Number(document.getElementById("num").value);
+var b=Number(document.getElementById("box7").value);
+alert(Math.pow(a,b));
+}
+
+function sqrt()
+{
+var a=Number(document.getElementById("num").value);
+alert(Math.sqrt(a));
+}
+
+function rou()
+{
+var a=Number(document.getElementById("decimal").value);
+alert(Math.round(a));
+}
+
+function ceil()
+{
+var a=Number(document.getElementById("decimal").value);
+alert(Math.ceil(a));
+}
+
+function floor()
+{
+var a=Number(document.getElementById("decimal").value);
+alert(Math.floor(a));
+}
+
+</script>
+</head>
+<body><form>
+<b style="font-size:20px;">STRING FUNCTIONS</b><br><br>
+Please Enter the text here:<input type="text" id="box1"></input><br><br>
+
+
+To get length of the string:<input type="button" value="Click Here" onclick="len()">
+</input><br><br>
+To get uppercase of the string:<input type="button" value="Click Here" onclick="up()">
+</input><br><br>
+
+To get lowercase of the string:<input type="button" value="Click Here" onclick="low()">
+</input><br><br>
+
+Slicing starts at position:<input type="text" id="box2">
+</input><br><br>
+Slicing ends at position:<input type="text" id="box3">
+</input><br><br>
+For Slicing:<input type="button" value="Click Here" onclick="slice()">
+</input><br><br>
+
+Element to be replaced:<input type="text" id="box4">
+</input><br><br>
+Element to be placed:<input type="text" id="box5">
+</input><br><br>
+For Replacement:<input type="button" value="Click Here" onclick="repl()">
+</input><br><br>
+
+Text to be concatenated:<input type="text" id="box6">
+</input><br><br>
+For Concatenation:<input type="button" value="Click Here" onclick="conca()">
+</input><br><br><br>
+
+
+
+
+<b style="font-size:20px;">MATH FUNCTIONS</b><br><br>
+Please enter a number:<input type="text" id="num"></input><br><br>
+
+Enter the power of number to calculated :<input type="text" id="box7"></input><br><br>
+Find Power<input type="button" value="Click here" onclick="pow()"></input><br><br>
+
+To find square root<input type="button" value="Click here" onclick="sqrt()"></input><br><br>
+
+Enter a decimal number<input type="text" id="decimal"></input><br><br>
+
+To round off :<input type="button" value="Click here" onclick="rou()"></input><br><br>
+
+To round a number upwards to the nearest integer:<input type="button" value="Click here" onclick="ceil()"></input><br><br>
+
+To round a number downwards to the nearest integer:<input type="button" value="Click here" onclick="floor()"></input><br><br>
+</form>
+</body>
+</html>
