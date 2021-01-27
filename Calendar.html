@@ -1,0 +1,81 @@
+
+
+
+<html>
+<head>
+<title>Calendar</title>
+<style>
+
+#t
+{
+font-size:25;
+}
+.b
+{
+border-collapse:collapse;
+}
+
+</style>
+</head>
+
+<body>
+<center>
+
+      <table border='2' class='b' cellspacing='5' cellpadding='5'><tr><th>
+      <b><h2><br>Calender for the Year:</b>
+      <td>
+      <input type="text" name='calender'  id="year">
+      </h2></td>
+      </th></tr>
+      <tr><td  colspan='2' align='center'><br>
+      <button type="button" name="View" onclick="createCalendar()">CLICK HERE</button>
+      <br></td></tr></table>
+      <br><br><br>
+</center>
+
+<center>
+<div id="calendar">
+
+      <script>
+        function createCalendar()
+        {
+          var d="";
+          d+="<table border='1' cellspacing='5' style='border-collapse:collapse'; cellpadding='5'><tr><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr><tr>";
+          for(var j=0; j<12; j++)
+          {
+            d+="<td><table border='1' style='border-collapse:collapse';><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+            var mm = j;
+            var yy = document.getElementById('year').value;
+            var c = new Date(yy, mm, 1);
+            var day = c.getDay();
+            for(var i=0; i<day; i++)
+            {
+              d+="<td></td>";
+            }
+            while(c.getMonth()==mm)
+            {
+              d+="<td>"+ c.getDate()+ "</td>";
+              if(c.getDay()%7==6)
+              {
+                d+="</tr><tr>";
+              }
+              c.setDate(c.getDate()+1);
+            }
+
+
+            d+="</tr></table></td>";
+            if(mm==5)
+            {
+              d+="</tr><tr><th>July</th><th>August</th><th>September</th><th>October</th><th>November</th><th>December</th></tr><tr>";
+            }
+           
+          }
+          d+="</tr></table>"
+          document.getElementById('calendar').innerHTML = d;
+        }
+      </script>
+    </div>
+</center>
+</body>
+</html>
+
