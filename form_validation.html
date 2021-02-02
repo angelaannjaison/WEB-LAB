@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<title>form validation</title>
+</head>
+
+
+<style>
+table
+{
+background-color:white;
+}
+#new
+{
+color:white;
+}
+</style>
+
+<body background="https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg" style="background-repeat:norepeat;background-size:cover;">
+
+<script>
+function validateform()
+{
+var x=document.myform.admin.value;
+if (x=="")
+{
+alert("Please enter Admission Number !!! ");
+return false;
+}
+}
+
+function abc()
+{
+alert("Are you sure to submit?you can't further make any changes after submission")
+return true;
+}
+</script>
+
+
+<br><br>
+<center>
+<h1 id="new">APPLICATION</h1>
+<form name="myform" action="/action.php" onsubmit="return validateform()" method="post">
+<table height=80% width=80% border="3" style="border-collapse:collapse;">
+
+<tr><th>NAME</th><td><input type="text" name="name" maxlength="14" required></input>
+
+<tr><th>Admission No:</th><td><input name="admin" type="text" placeholder="12345" pattern="[0-9]{5}" title="invalid admission number"></input><br></tr>  
+
+<tr><th>Date of Birth:</th><td><input name="dob" type="date" required></input><br></tr>
+
+<tr><th>Age:</th><td><input type="text" name="age" pattern="[0-9]{2}" title="enter in numeric form.Make sure it contains two digits" optional></input><br></tr> 
+
+<tr><th>Email-id:</th><td><input name="mailid" type="email" placeholder="abc@cet.com" required></input>
+
+<tr><th>Password:</th><td><input name="pass" type="password" pattern="[0-9]{5}" title="enter a five digit number as a password" required></input><br></tr> 
+
+<tr><th>Nationality:</th><td><input type="text" name="nationality" value="Indian" disabled></input><br></tr>  
+
+<tr><th>Address:</th><td><textarea name="address" rows="5"cols="30"></textarea></input><br></tr>
+
+<tr><th>Phone No:</th><td><input type="text" name="ph-no" maxlength="12" value="+91"></input><br></tr> 
+
+<tr><th align="center" colspan="2"><input name="submit" type="submit" value="submit" onclick="abc()" ></th></tr>
+
+</table>
+</form> 
+</center> 
+</body>
+</html>
+
+          
+
+
