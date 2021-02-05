@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<title>js:mouseover</title>
+
+<style>
+#text1
+{
+color:blue;
+text-align:center;
+}
+
+#text2
+{
+display:none;
+color:red;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+<p id="body">
+<img src="https://i.stack.imgur.com/vhoa0.jpg" height=50% width=100% id="image">
+<h1 id="text1">HELLO EVERYONE!!!</h1>
+<h1 id="text2">WELCOME TO THE WORLD OF POSSIBILITY</h1>
+</p>
+<script>
+document.getElementById("body").addEventListener("mouseover",transform1);
+document.getElementById("body").addEventListener("mouseout",transform2);
+function transform1()
+{
+document.getElementById("image").src="https://wallpapertag.com/wallpaper/full/3/4/4/610848-free-download-flower-desktop-backgrounds-2560x1600.jpg";
+document.getElementById("text1").style.display="none";
+document.getElementById("text2").style.display="block";
+}
+function transform2()
+{
+document.getElementById("image").src="https://i.stack.imgur.com/vhoa0.jpg";
+document.getElementById("text1").style.display="block";
+document.getElementById("text2").style.display="none";
+}
+
+</script>
+</body>
+</html>
