@@ -14,12 +14,13 @@ table
 {
 background-color:white;
 height:60%;
-
 width:80%;
 }
 
-.error {color:red;}
+.error 
+{color:red;}
 </style>
+  
 <body>
 <center>
 <h1>FORM VALIDATION</h1>
