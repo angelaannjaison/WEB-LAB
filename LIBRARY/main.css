@@ -26,11 +26,11 @@ html, body
 }
 input[type="number"], input[type="password"], select
 {
-	margin-bottom: 25px;
+	margin-bottom: 1%;
 }
 .card-title
 {
-	padding-top: 15px;
+	padding-top: 2%;
 }
 a
 {
@@ -43,11 +43,12 @@ a: hover
 }
 button
 {
+	margin-top: 10px;
 	background: #000 !important;
-	font-size: 14px;
+	font-size: 1.05vw;
 }
 .signup
 {
 	text-align: center;
-	padding-top: 25px;
+	padding-top: 2%;
 }
