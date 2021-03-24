@@ -18,7 +18,7 @@
 						<input type="text" name="name" class="form-control form-control-sm" required>
 					</div>
 					<div class="form-group">
-						<br>
+						
 						<label for="inputcourse">Course</label>
 						<select name="course"  class="form-select form-select-sm" required>
 							<option value="BCA">BCA</option>
