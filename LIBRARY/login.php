@@ -25,9 +25,9 @@
 									<option value="ADMIN">Admin</option>
 									<option value="STUDENT">Student</option>
 								</select>
-							</div>
+							</div><br>
 							<button type="submit" class="btn btn-dark  w-100" value="LOGIN" name="submit">LOGIN</button>
-							<div class="signup">
+							<div class="signup"><br>
 								Not Yet Registered? <a href="student_registration.php">Register Now</a>
 							</div>
 						</form>
